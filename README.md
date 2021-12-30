@@ -52,6 +52,7 @@ https://image-hosting-sharing-service.herokuapp.com/api/images/4
 https://image-hosting-sharing-service.herokuapp.com/api/images/addaccess
 
 ###### POST | REMOVE USER ACCESS  
+
 https://image-hosting-sharing-service.herokuapp.com/api/images/removeaccess
 ---------------------------------------------------------------------------------------
 
@@ -108,21 +109,21 @@ URL : https://image-hosting-sharing-service.herokuapp.com/api/login
 'password' : 123456 <br>
 }
 
-Response:
-{
-"errors": false,
-"data": {
-"message": "Logged in successfully",
-"user": {
-"name": "test user",
-"email": "testuser@gmail.com",
-"age": "22"
-"profile_picture": "http://image-hosting-sharing-service.herokuapp.com/storage/profile-pictures/image-name.png"
-},
+Response: <br>
+{ <br>
+"errors": false, <br>
+"data": { <br>
+"message": "Logged in successfully", <br>
+"user": { <br>
+"name": "test user", <br>
+"email": "testuser@gmail.com", <br>
+"age": "22" <br>
+"profile_picture": "http://image-hosting-sharing-service.herokuapp.com/storage/profile-pictures/image-name.png" <br>
+}, <br>
 "token": "bnasbmasdnmasbm.MDAwMCwiZGF0YSI6MX0.rOwCjuny9TLSsf9Lc
-MzeSuGzGU8Yez1kzWW3jzsViA4"
-}
-}
+MzeSuGzGU8Yez1kzWW3jzsViA4" <br>
+} <br>
+} <br>
 
 
 ###### Image References

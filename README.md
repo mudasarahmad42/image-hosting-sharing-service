@@ -175,6 +175,7 @@ Response:
 ###### • Upload Images
 
 Image References
+
 Request:
 
 ![Request](public/api-reference/image_upload_request.jpg)
@@ -201,6 +202,7 @@ Image References
 ###### • All Images by the user
 
 Image References
+
 ![Request&Response](public/api-reference/get_all_images_by_user.jpg)
 --------------------------------------------------------------------------------------
 
@@ -211,6 +213,7 @@ False => Public => 0 <br>
 NULL => Hidden
 
 Image References
+
 ![Request&Response](public/api-reference/image_privacy.jpg)
 ---------------------------------------------------------------------------------------
 
@@ -224,10 +227,12 @@ Image References
 ###### • Add access
 
 Image References
+
 ![Request&Response](public/api-reference/add_access.jpg)
 ---------------------------------------------------------------------------------------
 
 ###### • Remove access
 
 Image References
+
 ![Request&Response](public/api-reference/remove_access.jpg)

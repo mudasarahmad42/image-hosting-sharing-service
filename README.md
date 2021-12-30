@@ -51,8 +51,7 @@ https://image-hosting-sharing-service.herokuapp.com/api/images/4
 ###### POST | ADD USER ACCESS
 https://image-hosting-sharing-service.herokuapp.com/api/images/addaccess
 
-###### POST | REMOVE USER ACCESS  
-
+###### POST | REMOVE USER ACCESS
 https://image-hosting-sharing-service.herokuapp.com/api/images/removeaccess
 ---------------------------------------------------------------------------------------
 

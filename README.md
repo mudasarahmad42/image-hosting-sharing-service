@@ -1,66 +1,99 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Laravel APIs Documentation
 
-## About Laravel
+### HEADERS REQUIRED
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ Make sure your request has following headers: 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+'Accept' : 'application/json' <br>
+'Authorization' : 'Bearer Token' <small class="text-muted">where required</small>
+------------------------------------------------------------------------------------------
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### API URLs
 
-## Learning Laravel
+###### POST | REGISTER USER |
+https://image-hosting-sharing-service.herokuapp.com/api/register
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+###### POST | LOGIN USER |
+https://image-hosting-sharing-service.herokuapp.com/api/login
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+###### POST | LOGOUT USER |
+https://image-hosting-sharing-service.herokuapp.com/api/logout
 
-## Laravel Sponsors
+###### POST | FORGOT PASSWORD |
+https://image-hosting-sharing-service.herokuapp.com/api/forgot-password
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+###### GET | USER PROFILE |
+https://image-hosting-sharing-service.herokuapp.com/api/users/myprofile
 
-### Premium Partners
+###### POST| UPDATE USER PROFILE |
+https://image-hosting-sharing-service.herokuapp.com/api/users/update
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+###### POST | UPLOAD IMAGE |
+https://image-hosting-sharing-service.herokuapp.com/api/image/upload
 
-## Contributing
+###### DELETE | DELETE IMAGE 
+https://image-hosting-sharing-service.herokuapp.com/api/image/delete/6
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+###### GET | FIND ALL IMAGES 
+https://image-hosting-sharing-service.herokuapp.com/api/images/all
 
-## Code of Conduct
+###### GET | FIND ALL IMAGES OF THE USER |
+https://image-hosting-sharing-service.herokuapp.com/api/images
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+###### POST | CHANGE PRIVACY OF THE IMAGE | 
+https://image-hosting-sharing-service.herokuapp.com/api/images/change-privacy/4
 
-## Security Vulnerabilities
+###### GET | FIND IMAGE BY ID|
+https://image-hosting-sharing-service.herokuapp.com/api/images/4 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+###### POST | ADD USER ACCESS |
+https://image-hosting-sharing-service.herokuapp.com/api/images/addaccess
 
-## License
+###### POST | REMOVE USER ACCESS  
+https://image-hosting-sharing-service.herokuapp.com/api/images/removeaccess
+---------------------------------------------------------------------------------------
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Authentication
+
+###### • Register
+
+URL : https://image-hosting-sharing-service.herokuapp.com/api/register
+
+Parameters
+
+{ <br>
+            'name' : 'Test User' <br>
+            'email' : 'testuser@gmail.com' <br>
+            'password' : 123456 <br>
+            'password_confirmation' : 123456 <br>
+            'age' : '22' <br>
+            'profile_picture' : base64 string <br>
+} <br>
+
+
+{ <br>
+    "errors": false, <br>
+    "data": { <br>
+        "message": "User has been created successfully", <br>
+        "user": { <br>
+                "name": "test user", <br>
+                "email": "testuser2@gmail.com", <br>
+                "age": "22", <br>
+                "profile_picture": "http://image-hosting-sharing-service.herokuapp.com/storage/profile-pictures/image-name.png" <br>
+                } <br>
+            } <br>
+} <br>
+
+
+###### Image References
+####### Request
+
+![Request](public/api-reference/register_request.jpg)
+
+<img class="m-5" src="{{ asset('api-reference/register_request.jpg' ,true) }}" alt="">
+
+####### Response
+
+![Response](public/api-reference/register-response.jpg)

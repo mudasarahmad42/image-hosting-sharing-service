@@ -26,8 +26,8 @@
 
             login to receive the password sent by password reset api <br>
 
-            Email : batalew787@ecofreon.com <br>
-            Password : batalew787@ecofreon <br>
+            Email : ******** <br>
+            Password : ********* <br>
         </p>
 
         <hr>
